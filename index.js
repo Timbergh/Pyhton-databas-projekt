@@ -95,7 +95,7 @@ app.post('/register', (req, res) => {
   const hashedPassword = hash(password);
 
   // Spara användaruppgifterna i "users"-tabellen
-  const query = 'INSERT INTO users (username, password, email) VALUES (?, ?, ?)';
+  const query = 'INSERT IN TO users (username, password, email) VALUES (?, ?, ?)';
   connection.query(query, [username, hashedPassword, email], (err, result) => {
     if (err) {
       console.error('Fel vid sparande av användare: ' + err.stack);
